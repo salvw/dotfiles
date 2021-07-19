@@ -1,0 +1,16 @@
+# create universal variable my_dotfiles where the repo is going to reside
+set -U my_dotfiles /projects/dotfiles.git
+
+# setup a fish alias for git which 
+# sets the .git directory to $DOTFILES 
+# and the working tree to $HOME 
+alias -s gitdotfiles='git --git-dir=$DOTFILES --work-tree=$HOME'
+abbr gdf gitdotfiles
+
+# for gitdotfiles status don't show untracked files
+gitdotfiles config status.showUntrackedFiles no
+
+# making a change & commiting a dotfile
+echo "syntax on" >> .vimrc
+gitdotfiles add .vimrc
+gitdotfiles commit 

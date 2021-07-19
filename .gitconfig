@@ -1,0 +1,5 @@
+[user]
+	email = mail@salvanwezel.be
+	name = Sal van Wezel
+[init]
+	defaultBranch = main
