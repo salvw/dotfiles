@@ -27,12 +27,3 @@ if type -q exa
 else
   echo "=> Exa is not installed, skipping plugin"
 end
-echo
-
-if type -q docker-compose
-  echo "=> Docker Compose is installed, adding abbreviations."
-  abbr --add --universal dc docker-compose
-  abbr --add --universal dcd 'docker-compose down'
-  abbr --add --universal dcu 'docker-compose up'
-  abbr --add --universal dcud 'docker-compose up -d'
-end
