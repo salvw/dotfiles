@@ -3,3 +3,5 @@
 	name = Sal van Wezel
 [init]
 	defaultBranch = main
+[core]
+	autocrlf = input
