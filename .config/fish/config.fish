@@ -7,4 +7,6 @@ if status is-interactive
     abbr --add --global dcu  'docker compose up'
     abbr --add --global dcud 'docker compose up -d'
   end
+
+  abbr --add --global dg 'dotgit'
 end
