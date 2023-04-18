@@ -8,5 +8,5 @@ if status is-interactive
     abbr --add --global dcud 'docker compose up -d'
   end
 
-  abbr --add --global dg 'dotgit'
+  abbr --add --global dg 'git --git-dir .dotfiles/ --work-tree=$HOME'
 end
