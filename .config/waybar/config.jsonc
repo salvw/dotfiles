@@ -1,0 +1,48 @@
+{
+    "position": "top", 
+    "layer": "top",
+    "modules-left": ["wlr/workspaces"],
+    "modules-center": ["custom/spotify"],
+    "modules-right": ["network", "cpu", "memory", "wireplumber", "clock"],
+    // Modules configuration
+    "wlr/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "sort-by-name": true,
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+             }
+         },
+	"clock": {
+		"format": "<span foreground='#C6AAE8'> </span>{:%a %d %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	},
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "on-click": "helvum",
+        "format-icons": ["", "", ""]
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+}
