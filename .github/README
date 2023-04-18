@@ -1,0 +1,15 @@
+# Sal's Dotfiles
+### Prerequisites:
+- **git**: to manage this
+- **fish**: shell
+- **nnn**: filebrowser
+- ... more later
+
+Create universal variable my_dotfiles where the repo is going to reside:
+
+`set -U my_dotfiles /projects/dotfiles.git`
+
+Set up a fish alias for git which sets the .git directory to $my_dotfiles and the working tree to $HOME
+
+
+This setup was inspired by: https://www.ackama.com/what-we-think/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained/
