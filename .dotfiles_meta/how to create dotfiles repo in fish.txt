@@ -14,3 +14,10 @@ gitdotfiles config status.showUntrackedFiles no
 echo "syntax on" >> .vimrc
 gitdotfiles add .vimrc
 gitdotfiles commit 
+
+to start fish shell put this in .bashrc:
+`
+if [ -z "$FISH_VERSION" ]; then
+	command -v fish >/dev/null 2>&1 && exec fish
+fi
+`
