@@ -1,0 +1,5 @@
+theme = "monokai_pro"
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
