@@ -1,48 +1,89 @@
 {
-    "position": "top", 
-    "layer": "top",
-    "modules-left": ["wlr/workspaces"],
-    "modules-center": ["custom/spotify"],
-    "modules-right": ["network", "cpu", "memory", "wireplumber", "clock"],
-    // Modules configuration
-    "wlr/workspaces": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "sort-by-name": true,
-        "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-             }
-         },
-	"clock": {
-		"format": "<span foreground='#C6AAE8'> </span>{:%a %d %H:%M}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	},
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  "position": "top",
+  "layer": "top",
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "mpd"
+  ],
+  "modules-right": [
+    "network",
+    "cpu",
+    "memory",
+    "wireplumber",
+    "clock"
+  ],
+  // Modules configuration
+  "wlr/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "sort-by-name": true,
+    "format-icons": {
+      "1": "",
+      "2": "󰈹",
+      "3": "",
+      "4": "󰎆",
+      "5": "",
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    }
+  },
+  "clock": {
+    "format": "<span foreground='#C6AAE8'> </span>{:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "on-click": "systemctl suspend"
+  },
+  "mpd": {
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "interval": 10,
+    "on-click": "mcg",
+    "consume-icons": {
+      "on": " " // Icon shows only when "consume" is on
     },
-    "wireplumber": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
-        "on-click": "helvum",
-        "format-icons": ["", "", ""]
+    "random-icons": {
+      "off": "<span color=\"#6C687A\"></span> ", // Icon grayed out when "random" is off
+      "on": " "
     },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+    "repeat-icons": {
+      "on": " "
     },
-    "memory": {
-        "format": "{}% "
+    "single-icons": {
+      "on": "1 "
     },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+  },
+  "network": {
+    "interface": "enp4s0", // (Optional) To force the use of this interface
+    "format-ethernet": "{ipaddr}/{cidr}  {bandwidthDownBytes:>}{bandwidthUpBytes:>}",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "on-click": "helvum",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "{}% "
+  }
 }
