@@ -23,3 +23,5 @@ end
 
 # set enviroment
 export (envsubst < .env)
+
+zoxide init fish | source

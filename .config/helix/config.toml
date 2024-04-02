@@ -1,5 +1,14 @@
-theme = "monokai_pro"
+theme = "kanagawa"
 
 [editor.lsp]
 display-inlay-hints = true
 display-messages = true
+
+[keys.normal]
+C-o = ":config-open"
+C-r = ":config-reload"
+
+[keys.normal."space"]
+q = ":quit" 
+w = ":write"
+c = ":buffer-close"
