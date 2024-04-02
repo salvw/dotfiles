@@ -11,7 +11,7 @@ if status is-interactive
     if type -q helix
         abbr --add hx helix
     end
-    
+
     abbr --add dg 'git --git-dir $HOME/.dotfiles/ --work-tree=$HOME'
 end
 

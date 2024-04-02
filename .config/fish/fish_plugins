@@ -1,9 +1,10 @@
 jorgebucaran/fisher
 jhillyerd/plugin-git
 jorgebucaran/replay.fish
-pure-fish/pure
 kenji-miyake/reload.fish
 gazorby/fish-exa
 gazorby/fish-abbreviation-tips
 jabirali/fish-abbrfile
 catppuccin/fish
+decors/fish-colored-man
+ilancosman/tide@v6
