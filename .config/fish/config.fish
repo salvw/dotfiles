@@ -12,7 +12,7 @@ if status is-interactive
         abbr --add hx helix
     end
     
-    abbr --add dg 'git --git-dir .dotfiles/ --work-tree=$HOME'
+    abbr --add dg 'git --git-dir $HOME/.dotfiles/ --work-tree=$HOME'
 end
 
 if set -q KITTY_INSTALLATION_DIR
